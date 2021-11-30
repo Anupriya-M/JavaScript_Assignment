@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <script type="text/javascript" src="script/script.js"></script>
+    </head>
+    <body>
+        <div>
+            <center>
+            <h1>Submit Your Application</h1>
+            <p>for .NET DEVELOPER(Fresher)</p>
+            </center>
+        </div>
+
+       <div>
+           <h3>Personal Information</h3>
+       </div>  
+
+       <div>
+           <label for="name">Name as per ID proof<span class="red">*</span></label>
+           <input type="text" id="name"><span id="req">Required</span>
+       </div><br>
+
+       <div>
+           <label for="fname">Father's Name<span class="red">*</span></label>
+           <input type="text" id="fname"><span id="reqfname">Required</span>
+       </div><br>
+
+       <div>
+           <label for="email">Email<span class="red">*</span></label>
+           <input type="text" id="email"><span id="reqmail">Required</span>
+       </div><br>
+
+       <div>
+           <label for="dob">Date of Birth<span class="red">*</span></label>
+           <input type="text" id="dob" placeholder="MM-DD-YYYY"><span id="reqdob">Required</span>
+       </div><br>
+
+       <div>
+           <label for="mobno">Mobile Number<span class="red">*</span></label>
+           <input type="text" id="mobno"><span id="reqnum">Required</span>
+       </div><br>
+
+       <div>
+           <label>Current Address<span class="red">*</span></label><br><br>
+           <div>
+               <input type="text" id="caddOne" placeholder="Address Line 1" ><span id="reqcaddone">Required</span>
+           
+               <input type="text" name="" id="caddTwo" placeholder="Address Line 2"><span id="reqcaddtwo">Required</span>
+           
+               <input type="text" name="" id="cdistrict" placeholder="District"><span id="reqcdistrict">Required</span>
+           </div><br>
+           <div>
+               <select name="state" id="cstate">
+                   <option value="Tamil Nadu">Tamil Nadu</option>
+                   <option value="Maharastra">Maharastra</option>
+                   <option value="Pune">Pune</option>
+                   <option value="Andra Pradesh">Andra Pradesh</option>
+               </select>
+           </div><br>
+           <div>
+               <input type="text" name="" id="cpincode" placeholder="Pincode"><span id="reqcpincode">Required</span>
+           </div>
+           <br>
+       </div><br>
+       <div>
+            <label>Permanent Address<span class="asterisk">*</span></label>
+            <input type="checkbox" id="chkbox" onclick="copy()">Same as Current Address <br><br>
+            <div>
+                <input type="text" id="paddOne" placeholder="Address Line 1"><span id="reqpaddone">Required</span>
+            
+                <input type="text" name="" id="paddTwo" placeholder="Address Line 2"><span id="reqpaddtwo">Required</span>
+           
+                <input type="text" name="" id="pdistrict" placeholder="District"><span id="reqpdistrict">Required</span>
+            </div>
+            <div><br>
+                <select name="state" id="pstate">
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Maharastra">Maharastra</option>
+                    <option value="pune">pune</option>
+                    <option value="Andra Pradesh">Andra Pradesh</option>
+                </select>
+            </div><br>
+            <div>
+                <input type="text" name="" id="ppincode" placeholder="Pincode"><span id="reqppincode">Required</span>
+            </div>
+            <br>
+       </div>
+       <div>
+           <p>Upload profile photo<span class="red">*</span> (JPG/PNG format only) <br>
+                Please upload a photo of yourself. Your face should be clearly visible. Make sure the image size does not exceed 500kb.</p>
+            <input type="file" name="" id="upload"><span id="reqfile">Required</span>
+       </div><br><br>
+       <div>
+           <center>
+           <button id="submitbutton" onclick="nameValidation(),fathernameValidation(),emailValidation(),mobileNumValidation(),caddOneValidation(),caddTwoValidation(),cdistrictValidation(),cpincodeValidation(),paddOneValidation(),uploadfile(),dobValidation()">Submit</button>
+            </center>
+       </div>
+    </body>
+</html>
